@@ -9,15 +9,37 @@
 
     <form action="\" method="post" id="contact-form">
         <label for="name">名前:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+        <input type="text" id="name" name="name" required><br>
 
         <label for="email">メールアドレス:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="topic">お問い合わせ内容：</label>
+        <select id="topic" name="topic">
+            <option value="">選択してください</option>
+            <option value="教材について">教材について</option>
+            <option value="アカウントについて">アカウントについて</option>
+            <option value="その他">その他</option>
+        </select><br>
 
-        <label for="message">メッセージ:</label><br>
-        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        <div id="material-name-div" style="display: none;">
+            <label for="material-name">教材名：</label>
+            <input type="text" id="material-name" name="material-name">
+        </div>
+        <div id="account-name-div" style="display: none;">
+            <label for="account-name">アカウント名：</label>
+            <input type="text" id="account-name" name="account-name">
+        </div>
+        
+        <div id="message-div" style="display: none;">
+            <label for="message">メッセージ:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        </div>                                     
 
-        <input type="submit" value="送信">
+        <div id="submit-div" style="display: none;">
+            <input type="submit" value="送信">
+        </div>
+
     </form>
 
     <script src="../static/js/contact.js"></script>
